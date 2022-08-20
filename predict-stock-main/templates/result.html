@@ -1,0 +1,71 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>검색 결과</title>
+	<link href="{{ url_for('static', filename='css/result.css') }}" rel="stylesheet" type="text/css">
+	<script src="{{ url_for('static',filename='js/realtimenews.js') }}"></script>
+</head>
+<body>
+<div id="container">
+	<div class='content'>
+		{% if type == "news" %}
+		<h2>최근 {{ value }}분 뉴스를 검색한 결과입니다</h2>
+		<h3>시간 : {{ time }}</h3>
+		{% elif type == "twitter" %}
+		<h2>트위터에서 {{ keyword }} 을(를) 검색한 결과입니다</h2>
+		<h3>시간 : {{ time }}</h3>
+		{% endif %}
+	</div>
+
+	<div class='content'>
+		<div class='item'>
+            <a href="../"><span>처음으로</span></a>
+        </div>
+	</div>
+
+	<div class='content'>
+		{% if type == "error" %}
+		<h3>문제가 발생했습니다. 입력값을 확인해주세요.</h3>
+		{% elif type == "nodata" %}
+		<h3>검색된 데이터가 없습니다.</h3>
+		{% else %}
+		<table>
+			<tr>
+				<td class="table_head">index</td>
+				<td class="table_head">contents</td>
+			</tr>
+		{% for item in data %}
+			{% if loop.index % 2 == 0 %}
+			<tr class="table_even">
+			{% else %}
+			<tr class="table_odd">
+			{% endif %}
+				<td class="table_index">{{ loop.index }}</td>
+				{% if type == "news" %}
+				<td class="table_content">
+					{{ item[0] }} [ {{ item[3] }} ]<br>
+					<a href= {{ item[2] }} >{{ item[1] }}</a><br>
+					예상 종목 : {{ item[4] }}<br> 
+					뉴스 예측 : {{ item[5] }}<br>
+					등락 예측 : {{ item[6] }}
+				</td>
+				{% elif type == "twitter" %}
+				<td class="table_content">
+					[ {{ item[2] }} ]<br>
+					<a href= {{ item[1] }} >{{ item[0] }}</a><br>
+					예상 종목 : {{ item[3] }}<br> 
+					트윗 예측 : {{ item[4] }}<br>
+					등락 예측 : {{ item[5] }}
+				</td>
+				{% endif %}
+			</tr>
+		{% endfor %}	
+		</table>
+		{% endif %}	
+	</div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+flask
+python-dotenv
+pytz
+tweepy
+beautifulsoup4
+lxml
+transformers
+tensorflow
+pandas
+numpy
+gunicorn
+torch

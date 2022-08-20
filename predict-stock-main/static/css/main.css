@@ -1,0 +1,140 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+#container {
+    margin: 0 auto;
+    width: 70%;
+}
+
+/* 내용 단락 */
+.content {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* 폼 */
+form {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/* 버튼 등 한 줄 단위 */
+.item {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+/* 왼쪽 주제 */
+.item div {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 0px;
+    width: 30%;
+    height: calc(100% - 2px);
+    text-align: right;
+    vertical-align: top;
+    border: 1px solid skyblue;
+    color: white;
+    background-color: skyblue;
+}
+
+.item div span {
+    display: inline-block;
+    margin-right: 9px;
+    margin-top: 9px;
+}
+
+/* 링크 */
+.item a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: skyblue;
+    border: 1px solid skyblue;
+    border-radius: 5px;
+    color: white;
+    width: 40%;
+    max-width: 200px;
+    height: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.item a span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40%;
+    max-width: 200px;
+    height: 100%;
+    margin-top: 12px;
+}
+
+.item a:hover {
+    color: skyblue;
+    background-color: rgba(0,0,0,0);
+    transition-property: background-color, color;
+    transition-duration: .5s;
+}
+
+/* 텍스트 입력 부분 */
+.input{
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid skyblue;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: inline-block;
+    font-size: 20px;
+    height: 100%;
+    margin-left: -1px;
+    margin-right: 0px;
+    vertical-align: top;
+    width: calc(70% - 1px);
+}
+
+/* 제출 버튼 */
+.submit{
+    background-color: skyblue;
+    border: 1px solid skyblue;
+    border-radius: 5px;
+    color: white;
+    display: inline-block;
+    font-size: 20px;
+    height: 100%;
+    margin-left: -1px;
+    vertical-align: top;
+    width: 20%;
+}
+
+.submit:hover {
+    color: skyblue;
+    background-color: rgba(0,0,0,0);
+    transition-property: background-color, color;
+    transition-duration: .5s;
+}
+
+/* 옵션 선택 부분 */
+.item select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid skyblue;
+
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    margin-left: -1px;
+    font-size: 20px;
+    width: calc(70% - 1px);
+    height: 100%;
+}

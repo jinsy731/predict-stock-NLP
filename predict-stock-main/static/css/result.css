@@ -1,0 +1,79 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+#container {
+    margin: 0 auto;
+    width: 70%;
+}
+
+/* 내용 단락 */
+.content {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* 버튼 등 한 줄 단위 */
+.item {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+/* 결과 표 */
+table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.table_head {
+    text-align: center;
+    padding: 20px; 
+}
+
+.table_index {
+    text-align: center;
+    padding: 20px; 
+}
+
+.table_content {
+    text-align: left;
+}
+
+.table_odd {
+    background-color: skyblue;
+}
+
+.table_even {
+    background-color: white;
+}
+
+/* 링크 */
+.item a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: skyblue;
+    border: 1px solid skyblue;
+    border-radius: 5px;
+    color: white;
+    width: 40%;
+    max-width: 200px;
+    height: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.item a span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40%;
+    max-width: 200px;
+    height: 100%;
+    margin-top: 12px;
+}
